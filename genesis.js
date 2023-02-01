@@ -1,8 +1,8 @@
-
+//Require Items
 const inquirer = require('inquirer');
 const fs = require(`fs`);
 
-
+//Inquire prompts that will line out the readme
 inquirer.prompt([
     {
         type: 'input',
@@ -44,12 +44,9 @@ inquirer.prompt([
         name: 'test',
         message: 'How do we test this app?',
     },
-
-
+// .then to take the answers from our prompt above and display them
 ]).then(answers => {
-    const readme = 
-
-    `#${answers.project}
+    const readme = `# ${answers.project}
     
     ## Description
     
@@ -77,11 +74,17 @@ inquirer.prompt([
 
     ## Testing
 
-    ${answers.test}`;
-}).then fs.writeFile('README.md', readme, error =>{
-    if (error) {
-        console.log('ERROR');
-        return;
-    }
-    console.log('Your README.md has arrived.')
+    ${answers.test} `;
+
+    console.log(readme);
+
+    // takes are answers from prompt, then takes the data and writes the readme file
+    fs.writeFile('README.md', readme, error =>{
+        if (error) {
+            console.log('ERROR');
+            return;
+        }
+        console.log('Your README.md has arrived.')
+});
+
 });
