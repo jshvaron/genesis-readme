@@ -1,4 +1,7 @@
+
 const inquirer = require('inquirer');
+const fs = require(`fs`);
+
 
 inquirer.prompt([
     {
@@ -75,4 +78,10 @@ inquirer.prompt([
     ## Testing
 
     ${answers.test}`;
+}).then fs.writeFile('README.md', readme, error =>{
+    if (error) {
+        console.log('ERROR');
+        return;
+    }
+    console.log('Your README.md has arrived.')
 });

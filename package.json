@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jshvaron/genesis-readme#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "inquirer": "^8.2.5",
     "save": "^2.9.0"
   }
