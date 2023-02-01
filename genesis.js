@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 inquirer.prompt([
     {
         type: 'input',
-        name: 'projectName',
+        name: 'project',
         message: 'What is the title of your project?',
     },
     {
@@ -28,7 +28,7 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'liscence',
+        name: 'license',
         message: 'What license(s) does this project have?',
     },
     {
@@ -43,9 +43,36 @@ inquirer.prompt([
     },
 
 
-]).then((answers) => {
-    if (answers.answer === 'yes') {
-        console.log('STILL A BUSTUH');
+]).then(answers => {
+    const readme = 
 
-    }}
-);
+    `#${answers.project}
+    
+    ## Description
+    
+    ${answers.description}
+
+    ## Table of Contents
+
+    ${answers.contents}
+    
+    ## Installation
+    
+    ${answers.install}
+
+    ## Usage
+
+    ${answers.usage}
+
+    ## Licenses
+
+    ${answers.license}
+
+    ## Contribute
+
+    ${answers.contribution}
+
+    ## Testing
+
+    ${answers.test}`;
+});
