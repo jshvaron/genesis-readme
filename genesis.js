@@ -48,31 +48,31 @@ inquirer.prompt([
 ]).then(answers => {
     const readme = `# ${answers.project}
     
-    ## Description
+## Description
     
     ${answers.description}
 
-    ## Table of Contents
+## Table of Contents
 
     ${answers.contents}
     
-    ## Installation
+## Installation
     
     ${answers.install}
 
-    ## Usage
+ ## Usage
 
     ${answers.usage}
 
-    ## Licenses
+## Licenses
 
     ${answers.license}
 
-    ## Contribute
+## Contribute
 
     ${answers.contribution}
 
-    ## Testing
+## Testing
 
     ${answers.test} `;
 
