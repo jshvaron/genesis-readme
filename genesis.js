@@ -29,10 +29,11 @@ inquirer.prompt([
         name: 'usage',
         message: 'How does someone use this project?',
     },
-    {
-        type: 'input',
+    { // added a list to select from the licenses available
+        type: 'list',
         name: 'license',
         message: 'What license(s) does this project have?',
+        choices: ['MIT License', 'Mozilla Public License 2.0', 'The Unlicense']
     },
     {
         type: 'input',
