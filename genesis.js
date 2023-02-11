@@ -23,7 +23,7 @@ inquirer.prompt([
         type: 'input',
         name: 'install',
         message: 'How does the user install this application?',
-    }
+    },
     {
         type: 'input',
         name: 'usage',
