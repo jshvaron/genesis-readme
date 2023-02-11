@@ -1,4 +1,4 @@
-# pass
+# node: bad option: --reset
 
    [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/) 
     
@@ -8,15 +8,15 @@
 
 ## Table of Contents
 
-    pass
+    node: bad option: --reset
     
 ## Installation
     
-    pass
+    node: bad option: --reset
 
 ## Usage
 
-    pass
+    node: bad option: --reset
 
 ## Licenses
 
@@ -24,8 +24,8 @@
 
 ## Contribute
 
-    pass
+    node: bad option: --reset
 
 ## Testing
 
-    pass 
+    node: bad option: --reset 

@@ -47,15 +47,26 @@ inquirer.prompt([
     },
 // .then to take the answers from our prompt above
 ]).then(answers => {
-    //adds badge based off selected license type
+    
     let badge;
-    if (answers.license === 'MIT License') {
-        badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
-    } else if (answers.license === 'Mozilla Public License 2.0') {
-        badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
-    } else if (answers.license === 'The Unlicense') {
-        badge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)';
+    switch(answers.license){
+
+            case 'MIT License':
+            badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+            break;
+
+            case 'Mozilla Public License 2.0':
+            badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+            break;
+
+            case 'The Unlicense':
+            badge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
+            break;
+        
     }
+
+    //adds license text
+    
 
     const readme = `# ${answers.project}
 
@@ -87,7 +98,9 @@ inquirer.prompt([
 
 ## Testing
 
-    ${answers.test} `;
+    ${answers.test} `; 
+
+    
 
     console.log(readme);
 
