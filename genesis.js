@@ -49,7 +49,7 @@ inquirer.prompt([
 ]).then(answers => {
     //creates licensing badge
     let badge;
-    switch(answers.license){
+        switch(answers.license){
 
             case 'MIT License':
             badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
@@ -67,22 +67,19 @@ inquirer.prompt([
 
     // generates licensing text screenshot FIX: how do I add this to the dedicated license section? When I move ${licenseText} it passes as plain text?????
     let licenseText;
-switch(answers.license){
-    case 'MIT License':
-        licenseText = '\n\nMIT License\n\n![MIT License Image](assets/MIT.png)'
-        break;
+        switch(answers.license){
+            case 'MIT License':
+                licenseText = '\n\nMIT License\n\n![MIT License Image](assets/MIT.png)'
+                break;
 
-    case 'Mozilla Public License 2.0':
-        licenseText = '\n\nMozilla Public License 2.0\n\n![Mozilla Public License 2.0 Image](assets/MPL.png)'
-        break;
+            case 'Mozilla Public License 2.0':
+                licenseText = '\n\nMozilla Public License 2.0\n\n![Mozilla Public License 2.0 Image](assets/MPL.png)'
+                break;
 
-    case 'The Unlicense':
-        licenseText = '\n\nThe Unlicense\n\n![The Unlicense Image](assets/UNL.png)'
-        break;
-}
-
-    //adds license text
-    
+            case 'The Unlicense':
+                licenseText = '\n\nThe Unlicense\n\n![The Unlicense Image](assets/UNL.png)'
+                break;
+    }   
 
     const readme = `# ${answers.project}
 
@@ -126,7 +123,7 @@ switch(answers.license){
             console.log('ERROR');
             return;
         }
-        console.log('Your README.md has arrived.')
+    console.log('Your README.md has arrived.')
 });
 
 });
