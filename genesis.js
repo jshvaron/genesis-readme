@@ -11,13 +11,13 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'desctiption',
+        name: 'description',
         message: 'How would you describe the project?',
     },
     {
-        type: 'input',
+        type: 'confirm',
         name: 'contents',
-        message: 'What are the table of contents?',
+        message: 'Do you require a Table of Contents?',
     },
     {
         type: 'input',
@@ -33,7 +33,7 @@ inquirer.prompt([
         type: 'list',
         name: 'license',
         message: 'What license(s) does this project have?',
-        choices: ['MIT License', 'Mozilla Public License 2.0', 'The Unlicense']
+        choices: ['MIT License', 'The Unlicense', 'Mozilla Public License 2.0']
     },
     {
         type: 'input',
@@ -45,8 +45,14 @@ inquirer.prompt([
         name: 'test',
         message: 'How do we test this app?',
     },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'What is your Github Username?',
+    },
 // .then to take the answers from our prompt above
 ]).then(answers => {
+
     //creates licensing badge
     let badge;
         switch(answers.license){
@@ -55,12 +61,12 @@ inquirer.prompt([
             badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
             break;
 
-            case 'Mozilla Public License 2.0':
-            badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
-            break;
-
             case 'The Unlicense':
             badge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
+            break;
+
+            case 'Mozilla Public License 2.0':
+            badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
             break;
         
     }
@@ -73,13 +79,24 @@ inquirer.prompt([
                 break;
 
             case 'Mozilla Public License 2.0':
-                licenseText = '\n\nMozilla Public License 2.0\n\n![Mozilla Public License 2.0 Image](assets/MPL.png)'
+                licenseText = '\nMozilla Public License 2.0\n\n![Mozilla Public License 2.0 Image](assets/MPL.png)'
                 break;
 
             case 'The Unlicense':
                 licenseText = '\n\nThe Unlicense\n\n![The Unlicense Image](assets/UNL.png)'
                 break;
     }   
+    let toc;
+    switch(answers.contents){
+        case true: 
+            toc = '\n[-Installation](##Installation) \n\n[-Usage](##Usage) \n\n[-Licenses](##Licenses) \n\n[-Contribute](##Contribute) \n\n[-Testing](##Testing) \n\n[-Questions](##Questions)'
+            break;
+
+        case false:
+            toc = ''
+            break;
+    }
+
 
     const readme = `# ${answers.project}
 
@@ -91,7 +108,7 @@ inquirer.prompt([
 
 ## Table of Contents
 
-    ${answers.contents}
+    ${toc}
     
 ## Installation
     
@@ -111,7 +128,12 @@ inquirer.prompt([
 
 ## Testing
 
-    ${answers.test} `; 
+    ${answers.test} 
+
+## Questions
+
+Please reach out to via Github: https://github.com/${answers.questions} or create an issue on the correlating repo page. My email is also located on my Github profile for further communication.
+`
 
     
 
