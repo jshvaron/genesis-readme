@@ -47,7 +47,7 @@ inquirer.prompt([
     },
 // .then to take the answers from our prompt above
 ]).then(answers => {
-    
+    //creates licensing badge
     let badge;
     switch(answers.license){
 
@@ -65,13 +65,29 @@ inquirer.prompt([
         
     }
 
+    // generates licensing text screenshot FIX: how do I add this to the dedicated license section? When I move ${licenseText} it passes as plain text?????
+    let licenseText;
+switch(answers.license){
+    case 'MIT License':
+        licenseText = '\n\nMIT License\n\n![MIT License Image](assets/MIT.png)'
+        break;
+
+    case 'Mozilla Public License 2.0':
+        licenseText = '\n\nMozilla Public License 2.0\n\n![Mozilla Public License 2.0 Image](assets/MPL.png)'
+        break;
+
+    case 'The Unlicense':
+        licenseText = '\n\nThe Unlicense\n\n![The Unlicense Image](assets/UNL.png)'
+        break;
+}
+
     //adds license text
     
 
     const readme = `# ${answers.project}
 
    ${badge} 
-    
+
 ## Description
     
     ${answers.description}
@@ -90,7 +106,7 @@ inquirer.prompt([
 
 ## Licenses
 
-    ${answers.license}
+    ${licenseText}
 
 ## Contribute
 
