@@ -9,17 +9,14 @@
 ## Table of Contents
 
     
-[-Installation](##Installation) 
+- [Installation](##installation) 
+- [Usage](##usage) 
+- [Licenses](##licenses) 
+- [Contribute](##contribute) 
+- [Testing](##testing) 
+- [Questions](##questions)
 
-[-Usage](##Usage) 
 
-[-Licenses](##Licenses) 
-
-[-Contribute](##Contribute) 
-
-[-Testing](##Testing) 
-
-[-Questions](##Questions)
     
 ## Installation
     
@@ -46,5 +43,7 @@ MIT License
     pass 
 
 ## Questions
+ 
 
 Please reach out to via Github: https://github.com/jshvaron or create an issue on the correlating repo page. My email is also located on my Github profile for further communication.
+

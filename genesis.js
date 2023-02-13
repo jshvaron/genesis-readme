@@ -71,7 +71,7 @@ inquirer.prompt([
         
     }
 
-    // generates licensing text screenshot FIX: how do I add this to the dedicated license section? When I move ${licenseText} it passes as plain text?????
+    // generates licensing text screenshot 
     let licenseText;
         switch(answers.license){
             case 'MIT License':
@@ -86,14 +86,15 @@ inquirer.prompt([
                 licenseText = '\n\nThe Unlicense\n\n![The Unlicense Image](assets/UNL.png)'
                 break;
     }   
+    // adds Table of Content hyper links based off inquirer confirmation BUG: Why are these not hyper link jumping?
     let toc;
     switch(answers.contents){
         case true: 
-            toc = '\n[-Installation](##Installation) \n\n[-Usage](##Usage) \n\n[-Licenses](##Licenses) \n\n[-Contribute](##Contribute) \n\n[-Testing](##Testing) \n\n[-Questions](##Questions)'
+            toc = '\n- [Installation](##installation) \n- [Usage](##usage) \n- [Licenses](##licenses) \n- [Contribute](##contribute) \n- [Testing](##testing) \n- [Questions](##questions)\n\n'
             break;
 
         case false:
-            toc = ''
+            toc = 'Take a look around!'
             break;
     }
 
@@ -131,8 +132,10 @@ inquirer.prompt([
     ${answers.test} 
 
 ## Questions
+ 
 
 Please reach out to via Github: https://github.com/${answers.questions} or create an issue on the correlating repo page. My email is also located on my Github profile for further communication.
+
 `
 
     
