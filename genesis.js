@@ -90,7 +90,7 @@ inquirer.prompt([
     let toc;
     switch(answers.contents){
         case true: 
-            toc = '\n- [Installation](##installation) \n- [Usage](##usage) \n- [Licenses](##licenses) \n- [Contribute](##contribute) \n- [Testing](##testing) \n- [Questions](##questions)\n\n'
+            toc = '\n- [Installation](#installation) \n- [Usage](#usage) \n- [Licenses](#licenses) \n- [Contribute](#contribute) \n- [Testing](#testing) \n- [Questions](#questions)\n\n'
             break;
 
         case false:

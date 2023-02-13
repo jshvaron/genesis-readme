@@ -9,12 +9,12 @@
 ## Table of Contents
 
     
-- [Installation](##installation) 
-- [Usage](##usage) 
-- [Licenses](##licenses) 
-- [Contribute](##contribute) 
-- [Testing](##testing) 
-- [Questions](##questions)
+- [Installation](#installation) 
+- [Usage](#usage) 
+- [Licenses](#licenses) 
+- [Contribute](#contribute) 
+- [Testing](#testing) 
+- [Questions](#questions)
 
 
     
@@ -45,5 +45,5 @@ MIT License
 ## Questions
  
 
-Please reach out to via Github: https://github.com/jshvaron or create an issue on the correlating repo page. My email is also located on my Github profile for further communication.
+Please reach out to via Github: https://github.com/j or create an issue on the correlating repo page. My email is also located on my Github profile for further communication.
 
