@@ -50,6 +50,11 @@ inquirer.prompt([
         name: 'questions',
         message: 'What is your Github Username?',
     },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email?',
+    },
 // .then to take the answers from our prompt above
 ]).then(answers => {
 
@@ -58,16 +63,16 @@ inquirer.prompt([
         switch(answers.license){
 
             case 'MIT License':
-            badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-            break;
+                badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+                break;
 
             case 'The Unlicense':
-            badge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
-            break;
+                badge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
+                break;
 
             case 'Mozilla Public License 2.0':
-            badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
-            break;
+                badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+                break;
         
     }
 
@@ -88,14 +93,14 @@ inquirer.prompt([
     }   
     // adds Table of Content hyper links based off inquirer confirmation BUG: Why are these not hyper link jumping?
     let toc;
-    switch(answers.contents){
-        case true: 
-            toc = '\n- [Installation](#installation) \n- [Usage](#usage) \n- [Licenses](#licenses) \n- [Contribute](#contribute) \n- [Testing](#testing) \n- [Questions](#questions)\n\n'
-            break;
+        switch(answers.contents){
+            case true: 
+                toc = '\n- [Installation](#installation) \n- [Usage](#usage) \n- [Licenses](#licenses) \n- [Contribute](#contribute) \n- [Testing](#testing) \n- [Questions](#questions)\n\n'
+                break;
 
-        case false:
-            toc = 'Take a look around!'
-            break;
+            case false:
+                toc = 'Take a look around!'
+                break;
     }
 
 
@@ -134,7 +139,7 @@ inquirer.prompt([
 ## Questions
  
 
-Please reach out to via Github: https://github.com/${answers.questions} or create an issue on the correlating repo page. My email is also located on my Github profile for further communication.
+Please reach out to via Github: https://github.com/${answers.questions} or create an issue on the correlating repo page. For any further communication, please email me: ${answers.email}.
 
 `
 

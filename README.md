@@ -1,10 +1,10 @@
-# pass
+# Genesis README.md
 
    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 ## Description
     
-    pass
+    This is a README.md generator tool.
 
 ## Table of Contents
 
@@ -20,11 +20,11 @@
     
 ## Installation
     
-    pass
+    Clone the repo, make sure you have  NPM and NPM Inquirer, then run this app through node  genesis.js.
 
 ## Usage
 
-    pass
+    Review the walkthrough video: https://drive.google.com/file/d/1-fGu8STmBgpno9Oq10kiqjBInZght6sj/view
 
 ## Licenses
 
@@ -36,14 +36,14 @@ MIT License
 
 ## Contribute
 
-    pass
+    Review the Questions section.
 
 ## Testing
 
-    pass 
+    Run the app via node. 
 
 ## Questions
  
 
-Please reach out to via Github: https://github.com/j or create an issue on the correlating repo page. My email is also located on my Github profile for further communication.
+Please reach out to via Github: https://github.com/jshvaron or create an issue on the correlating repo page. For any further communication, please email me: snailmail@mail.com.
 
