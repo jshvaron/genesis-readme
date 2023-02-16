@@ -5,6 +5,8 @@
 ## Description
     
     This is a README.md generator tool.
+    Deployed github page: https://jshvaron.github.io/genesis-readme/
+    Github Repo: https://github.com/jshvaron/genesis-readme
 
 ## Table of Contents
 
