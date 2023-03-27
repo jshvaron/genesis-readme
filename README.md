@@ -1,12 +1,10 @@
-# Genesis README.md
+# Miniature Eureka
 
    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 ## Description
     
-    This is a README.md generator tool.
-    Deployed github page: https://jshvaron.github.io/genesis-readme/
-    Github Repo: https://github.com/jshvaron/genesis-readme
+    A Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
 
 ## Table of Contents
 
@@ -22,11 +20,11 @@
     
 ## Installation
     
-    Clone the repo, make sure you have  NPM and NPM Inquirer, then run this app through node  genesis.js.
+    Git clone repo. No install needed, just visit the webpage.
 
 ## Usage
 
-    Review the walkthrough video: https://drive.google.com/file/d/1-fGu8STmBgpno9Oq10kiqjBInZght6sj/view
+    See video demo.
 
 ## Licenses
 
@@ -38,14 +36,14 @@ MIT License
 
 ## Contribute
 
-    Review the Questions section.
+    Git clone repo and submit PR, will merge upon review/approval.
 
 ## Testing
 
-    Run the app via node. 
+    Through usage. 
 
 ## Questions
  
 
-Please reach out to via Github: https://github.com/jshvaron or create an issue on the correlating repo page. For any further communication, please email me: snailmail@mail.com.
+Please reach out via Github: https://github.com/jshvaron or create an issue on the correlating repo page. For any further communication, please email me: nomail@mail.com.
 

@@ -139,7 +139,7 @@ inquirer.prompt([
 ## Questions
  
 
-Please reach out to via Github: https://github.com/${answers.questions} or create an issue on the correlating repo page. For any further communication, please email me: ${answers.email}.
+Please reach out via Github: https://github.com/${answers.questions} or create an issue on the correlating repo page. For any further communication, please email me: ${answers.email}.
 
 `
 
